@@ -43,11 +43,9 @@ def create_contacts():
             print(BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), company=fake.company(), job=fake.job(), email=fake.email(), business_phone=fake.phone_number()))
 
 
-card2 = BaseContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), email=fake.email())
-card3 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), company=fake.company(), job=fake.job(), email=fake.email(), business_phone=fake.phone_number())
-
-
 if __name__ == "__main__":
+    card2 = BaseContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), email=fake.email())
+    card3 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), company=fake.company(), job=fake.job(), email=fake.email(), business_phone=fake.phone_number())
     print(card2.contact())
     print(card3.contact())
     print(card2.label_length)
