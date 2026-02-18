@@ -33,9 +33,7 @@ class BusinessContact(BaseContact):
         return f"Wybieram numer {self.bussines_phone} i dzwonię do {self.first_name} {self.last_name}"
 
 
-def create_contacts():
-    a = int(input("Wpisz cyfrę: "))
-    card = int(input("Wybierz: 1 - Base lub 2 - Business: "))
+def create_contacts(a, card):
     for i in range(0, a):
         if card == 1:
             print(BaseContact(first_name=fake.first_name(), last_name=fake.last_name(), private_phone=fake.phone_number(), email=fake.email()))
@@ -50,4 +48,6 @@ if __name__ == "__main__":
     print(card3.contact())
     print(card2.label_length)
     print(card3.label_length)
-    create_contacts()
+    a = int(input("Wpisz cyfrę: "))
+    card = int(input("Wybierz: 1 - Base lub 2 - Business: "))
+    create_contacts(a, card)
